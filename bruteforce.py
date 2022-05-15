@@ -1,5 +1,4 @@
 from itertools import product
-import re
 import requests
 
 words_t = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*'
