@@ -9,19 +9,19 @@ if __name__ == "__main__":
     while(True):
         try:
             print("사용할 기능을 선택 \n")
-            print("1. bruteforce  2. 웹 서비스 메소드 점검  3. Auth-Injection(구현중, 미동작)")
+            print("1. bruteforce  2. 웹 서비스 메소드 점검  3. Injection(구현중, 미동작) 4. XSS(구현예정)")
             selec_modul = int(input("입력 : "))
             if selec_modul == 1 : 
                 brutefoce_attack()
             elif selec_modul == 2 : 
                 scan_method()
-            elif selec_modul == 3 : 
-                injection()
+            # elif selec_modul == 3 : 
+            #     injection()
             else :
                 os.system('cls')
                 print("\n아직 구현되지 않았습니다. 다른 기능을 이용해주세요.")
             
-            answer = input("종료 하시겠습니까? [Y/N] \n입력 : ")
+            answer = input("\n\n종료 하시겠습니까? [Y/N] \n입력 : ")
             if answer == 'Y' or answer == 'y' : break
             elif answer == 'N' or answer == 'n' : continue
         except KeyboardInterrupt:

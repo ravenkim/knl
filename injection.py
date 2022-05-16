@@ -13,12 +13,13 @@ def find_form(form_val):
 
 def injection():
     list_file = open("injection_bypass.txt", 'r', encoding='utf-8')
+    sql_url = input("입력 폼이 존재하는 URL 입력 \n입력: ")
 
-    sql_url = input("SQL Injection 입력 폼이 존재하는 URL 입력 \n입력:")
-    temp_address = requests.post(sql_url)
+    temp_address = requests.get(sql_url)
+    print(temp_address.text)
     textbox = temp_address.text.split('<input type="text"')
     textbox = textbox[1].split("\"")
-    find_form()
+    textbox = find_form(textbox)
     while(True):
         bypass_injection = list_file.readline()
         if bypass_injection == '' : break
