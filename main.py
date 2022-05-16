@@ -21,7 +21,7 @@ if __name__ == "__main__":
                 os.system('cls')
                 print("\n아직 구현되지 않았습니다. 다른 기능을 이용해주세요.")
             
-            answer = input("\n\n종료 하시겠습니까? [Y/N] \n입력 : ")
+            answer = input("\n\n프로그램을 종료 하시겠습니까? [Y/N] \n입력 : ")
             if answer == 'Y' or answer == 'y' : break
             elif answer == 'N' or answer == 'n' : continue
         except KeyboardInterrupt:
